@@ -127,6 +127,7 @@ const colorSelecter = document
   .getElementById("color")
   .addEventListener("change", (e) => {
     console.log(e.target.value)
+    imgText.style.color=''
     switch(e.target.value){
 
       case 'r':
