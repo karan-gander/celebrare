@@ -103,8 +103,11 @@ const fontSelecter = document
   .addEventListener("change", (e) => {
     console.log(e.target.value)
     
+    imgText.classList.remove('meow') 
+    imgText.classList.remove('q-regular') 
+    imgText.classList.remove('caveat') 
     switch(e.target.value){
-
+      
       case 'M':
         imgText.classList.add('meow')
         break
