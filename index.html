@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Demo styles -->
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <main class="main">
+      <section class="first">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img id="img" src="assets/one.webp" alt="" />
+              
+            </div>
+
+            <div class="swiper-slide"><img src="assets/two.webp" alt="" /></div>
+            <div class="swiper-slide"><img src="assets/two.webp" alt="" /></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section>
+        <div class="text-box">
+
+          <div>
+            <select name="font" id="fonts">
+              <option value="M">Meow</option>
+              <option value="Q">Quintessential</option>
+              <option value="C">Caveat</option>
+            </select>
+
+
+            <select name="color" id="color">
+              <option value="r">Red</option>
+              <option value="y">Yellow</option>
+              <option value="g">Green</option>
+            </select>
+
+           
+          </div>
+
+          <button class="text-btn">Add Text</button>
+
+          <textarea
+            name=""
+            id="text"
+            
+            placeholder="Enter placeholder"
+            rows="3"
+            cols="20"
+          ></textarea>
+        </div>
+      </section>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="main.js"></script>
+  </body>
+</html>

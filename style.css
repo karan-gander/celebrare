@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Meow+Script&family=Quintessential&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+}
+
+body {
+  background-color: rgb(243, 243, 243);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+}
+main.main {
+  padding: 250px 150px;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.first {
+  max-width: 500px;
+  margin: 50px;
+  /* height: 700px; */
+  /* object-fit: cover; */
+}
+
+.text-btn {
+  padding: 15px 60px;
+  background-color: #fff;
+  border: 0.5px solid;
+  font-weight: bold;
+  border-radius: 5px;
+
+  outline: #000;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+}
+.text-box textarea,
+button {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+div.text-box textarea {
+  display: none;
+  padding: 15px;
+}
+
+div.text-box .toggle-btn {
+  display: block;
+}
+
+/* .text-toggle{
+  display: none;
+} */
+
+.img-text {
+  z-index: 5;
+  top: 0;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid white;
+  outline: none;
+  text-align: center;
+  line-height: 100px;
+  cursor: grab;
+  user-select: none;
+}
+
+.img-text:active {
+  cursor: grabbing;
+}
+
+/* Swiper code  */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* .swiper-slide img {
+  height: 500px;
+  object-fit: cover;
+} */
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* z-index: ; */
+
+  object-fit: cover;
+}
+
+/* fonts  */
+
+.meow {
+  font-family: "Meow Script", cursive;
+  font-size: 20px;
+
+  font-style: normal;
+}
+
+.q-regular {
+  font-family: "Quintessential", serif;
+    font-size: 20px;
+  font-style: normal;
+}
+
+.caveat {
+  font-family: "Caveat";
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+}
