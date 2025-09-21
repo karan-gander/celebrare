@@ -2,8 +2,19 @@ var swiper = new Swiper(".mySwiper", {
   cssMode: true,
   on: {
     slideChange: function () {
-      console.log("Slide changed!");
-      console.log("Current slide index:", this.realIndex);
+      
+      
+  swiper.slides[swiper.realIndex].children[0].addEventListener("click", (e) => {
+    console.log(imgText.value);
+  
+    if (imgText.value === "") {
+      e.stopPropagation();
+      // imgText.remove();
+      // curruntElement.children[1].remove()
+      const curruntElement = swiper.slides[swiper.realIndex];
+      console.log(curruntElement.children[1].remove())
+    }
+  });
     },
   },
   navigation: {
@@ -27,11 +38,6 @@ imgText.setAttribute("name", "img-text");
 imgText.setAttribute("class", "img-text");
 imgText.setAttribute("row", "10");
 
-// document.addEventListener('DOMContentLoaded',(e)=>{
-
-//   imgText.addEventListener('keydown',(e)=>e.preventDefault())
-
-// })
 
 imgText.addEventListener("mousedown", (e) => {
   isDaraging = true;
@@ -59,24 +65,27 @@ imgText.addEventListener("mouseup", () => {
 
 const textArea = document.getElementById("text");
 const addTextBtn = document
-  .querySelector(".text-btn")
-  .addEventListener("click", (e) => {
+.querySelector(".text-btn")
+.addEventListener("click", (e) => {
     const curruntElement = swiper.slides[swiper.realIndex];
     const appendedChild = curruntElement.appendChild(imgText);
     // appendChild(newParagraph)
     console.log(curruntElement);
 
     const currentSlideIndex = swiper.realIndex;
-    console.log("Current slide index:", currentSlideIndex);
+    console.log("Current slide index:", curruntElement.children[0]);
     textArea.classList.toggle("toggle-btn");
   });
 
-img.addEventListener("click", (e) => {
+  swiper.slides[swiper.realIndex].children[0].addEventListener("click", (e) => {
   console.log(imgText.value);
 
   if (imgText.value === "") {
     e.stopPropagation();
-    imgText.remove();
+    // imgText.remove();
+    // curruntElement.children[1].remove()
+    const curruntElement = swiper.slides[swiper.realIndex];
+    console.log(curruntElement.children[1].remove())
   }
 });
 
